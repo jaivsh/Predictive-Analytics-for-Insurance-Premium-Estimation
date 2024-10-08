@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Jaivardhan Shukla</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #2c3e50, #4ca1af);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #1a252f;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #00bfff;
+        }
+
+        .container {
+            max-width: 900px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px 40px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin-top: 100px;
+        }
+
+        .header-content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-content h1 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .about-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+            color: #ffffff;
+            font-size: 0.8em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="/">Insurance Price Prediction System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="header-content">
+            <img src="{{ url_for('static', filename='images/img.jpg') }}" alt="Jaivardhan Shukla Image" class="about-image d-block mx-auto">
+            <h1>Jaivardhan Shukla</h1>
+        </div>
+
+        <div class="about-content">
+            <p>
+                Hello! I am Jaivardhan Shukla, a final-year undergraduate student in the Mining Engineering department at Visvesvaraya National Institute of Technology (VNIT), Nagpur. I am passionate about utilizing machine learning, neural networks, and data science to solve real-world problems. With a strong focus on predictive modeling and developing intelligent systems, I aim to leverage my technical expertise to create impactful solutions.
+            </p>
+            <p>
+                My journey into data science began with a fascination for how data-driven insights can influence decision-making and drive innovation. Over the years, I have worked on a variety of projects involving predictive modeling, feature engineering, and data visualization using tools such as Python, Pandas, Scikit-Learn, and TensorFlow.
+            </p>
+            <p>
+                I am particularly interested in exploring advanced machine learning algorithms, developing neural networks, and creating robust software systems that address complex challenges. In addition to my academic pursuits, I actively participate in online courses, data science competitions, and contribute to open-source projects to continually enhance my skills.
+            </p>
+            <p>
+                Feel free to connect with me through my <a href="https://www.linkedin.com/feed/" class="text-info">LinkedIn profile</a> or check out my projects on <a href="https://github.com/jaivsh" class="text-info">GitHub</a>. If you have any opportunities or collaborations in the fields of data science, machine learning, or software development, I would love to get in touch!
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Jaivardhan Shukla. All rights reserved.
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
