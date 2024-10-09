@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #2c3e50, #4ca1af);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #1a252f;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #00bfff;
+        }
+
+        .container {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px 40px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .alert-info {
+            background-color: #005f73;
+            color: #ffffff;
+            border-color: #002b36;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .alert-info h4 {
+            font-size: 1.5em;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+            color: #ffffff;
+            font-size: 0.8em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="/">Insurance Price Prediction System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Information <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        {% if prediction_text %}
+            <div class="alert alert-info mt-4">
+                <h4>{{ prediction_text }}</h4>
+            </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        &copy; 2024 Jaivardhan Shukla. All rights reserved.
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
