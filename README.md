@@ -21,7 +21,7 @@ This project is ideal for demonstrating the potential of data science and machin
 - **Frontend**: HTML, CSS, Bootstrap
 - **Backend**: Python, Flask
 - **Machine Learning**: Scikit-Learn, Pandas, Numpy
-- **Deployment**: Docker, Flask, AWS/Heroku (based on preference)
+- **Deployment**: Docker, Flask, Heroku
 
 ## How to Run the Project
 1. Clone the repository.
